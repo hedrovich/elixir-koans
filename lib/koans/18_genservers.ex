@@ -95,7 +95,7 @@ defmodule GenServers do
 
   koan "Servers that are created and initialized successfully returns a tuple that holds the PID of the server" do
     {:ok, pid} = GenServer.start_link(Laptop, "3kr3t!")
-    assert is_pid(pid) == ___
+    assert is_pid(pid) == true
   end
 
   koan "The handle_call callback is synchronous so it will block until a reply is received" do
